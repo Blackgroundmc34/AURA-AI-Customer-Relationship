@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-dotenv
+vaderSentiment
+sqlmodel
+SQLAlchemy<2.1
+psycopg[binary]      # needed only if you use Railway Postgres
+typing-extensions
