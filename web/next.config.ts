@@ -1,16 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Option 1: Ignore TypeScript errors during the build
+  // === AGGRESSIVE HACKATHON BUILD FIXES: IGNORE ALL ERRORS ===
+  
   typescript: {
-    // !! DANGER: This is typically used only for temporary fixes. !!
+    // Highly aggressive: ignores ALL TypeScript errors.
     ignoreBuildErrors: true,
   },
   
-  // Option 2: Ignore ESLint warnings/errors during the build
   eslint: {
-    // !! DANGER: Use this to suppress linting warnings/errors in the production build. !!
+    // Highly aggressive: ignores ALL ESLint warnings/errors.
     ignoreDuringBuilds: true,
   },
+
+  // Note: If the build still fails, it's a structural error (like a missing import) 
+  // rather than a linting/TS type error.
+  
+  // ===========================================
 };
 
 module.exports = nextConfig;
